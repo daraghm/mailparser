@@ -8,8 +8,8 @@
     </plugin-info>
 
     <!-- see jira tutorial -->
-    <message-handler i18n-name-key="demohandler.name" key="demoHandler"
-                     class="net.daragh.jira.mailparser.MessageHandler"
+    <message-handler i18n-name-key="mailhandler.name" key="mailHandler"
+                     class="net.daragh.jira.mailparser.MailHandler"
                      add-edit-url="/secure/admin/EditHandlerDetailsUsingParams!default.jspa" weight="0"/>
 
     <!-- add our i18n resource -->

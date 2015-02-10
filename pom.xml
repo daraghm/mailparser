@@ -83,7 +83,8 @@
                 <configuration>
                     <productVersion>${jira.version}</productVersion>
                     <productDataVersion>${jira.version}</productDataVersion>
-					<!-- Uncomment to install TestKit backdoor in JIRA. -->
+                    <jvmArgs>-Xmx 512m -Datlassian.mail.senddisabled=false -Datlassian.mail.fetchdisabled=false</jvmArgs>
+                    <!-- Uncomment to install TestKit backdoor in JIRA. -->
 					<!--
 					<pluginArtifacts>
 						<pluginArtifact>
