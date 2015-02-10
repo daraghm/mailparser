@@ -10,12 +10,12 @@
     <version>0.0.1</version>
 
     <organization>
-        <name>Example Company</name>
-        <url>http://www.example.com/</url>
+        <name>Jira MailParser</name>
+        <url>https://github.com/daraghm/mailparser</url>
     </organization>
 
     <name>mailparser</name>
-    <description>This is the net.daragh.jira:mailparser plugin for Atlassian JIRA.</description>
+    <description>This is the net.daragh.jira:mailparser plugin for Atlassian JIRA.  This enables external mail to be handled without creating users in the Jira system.</description>
     <packaging>atlassian-plugin</packaging>
 
     <dependencies>
