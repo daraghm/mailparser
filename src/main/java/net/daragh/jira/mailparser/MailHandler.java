@@ -36,7 +36,7 @@ public class MailHandler implements MessageHandler {
         //paramSet(params, Keys.KEY_local_mail_domains);//duplicated below?
         if (paramSet(params, Keys.KEY_local_mail_domains))
         {
-            //local_mail_domains = MailHandlerUtil.mailDomains(params.get(Keys.KEY_local_mail_domains));//TODO do we need this here?
+            local_mail_domains = parseMailDomains(params.get(Keys.KEY_local_mail_domains));//TODO do we need this here?
             log("local_mail_domains: " + params.get(Keys.KEY_local_mail_domains));
             log("local_mail_domains parsed to " + local_mail_domains.toString());
         }
@@ -87,6 +87,16 @@ public class MailHandler implements MessageHandler {
         }
         return true;
     }
+
+    //can be :@1.com:@2.com or 1.com:@,2.com or 1.com or null
+    //grab a string and split at every ,@
+    //first char does not have to be @
+    public static HashSet<String> parseMailDomains(String list_of_domains)
+    {
+        String[] domains = list_of_domains.replaceFirst("^:@", "").split(":@");
+        return new HashSet<String>(Arrays.asList(domains));
+    }
+
 
 
 }
